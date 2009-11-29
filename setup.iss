@@ -10,7 +10,7 @@ AppCopyright=©2009 Daniel15
 AppName=Sharpamp
 AppVerName=Sharpamp 1.0 Beta
 DefaultDirName={pf}\Sharpamp
-DefaultGroupName=Winamp\Sharpamp
+DefaultGroupName=Winamp
 AppPublisher=Daniel15
 AppPublisherURL=http://d15.biz/
 AppSupportURL=http://code.google.com/p/sharpamp/
@@ -47,3 +47,6 @@ Name: {app}\Samples
 [Registry]
 Root: HKLM; Subkey: SOFTWARE\Microsoft\.NETFramework\AssemblyFolders\Sharpamp; ValueType: string; ValueData: {app}
 Root: HKLM; Subkey: SOFTWARE\Wow6432Node\Microsoft\.NETFramework\AssemblyFolders\Sharpamp; ValueType: string; ValueData: {app}
+[Icons]
+Name: {group}\Uninstall Sharpamp; Filename: {uninstallexe}; IconFilename: {uninstallexe}
+Name: {group}\Sharpamp Samples; Filename: {app}\Samples\
