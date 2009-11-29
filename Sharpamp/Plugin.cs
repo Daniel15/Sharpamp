@@ -8,6 +8,9 @@ namespace Daniel15.Sharpamp
 	/// </summary>
 	public abstract class GeneralPlugin
 	{
+		/// <summary>
+		/// Access to the Winamp API
+		/// </summary>
 		protected Winamp Winamp { get; private set; }
 
 		/// <summary>

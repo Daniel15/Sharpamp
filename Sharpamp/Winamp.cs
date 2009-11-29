@@ -40,10 +40,25 @@ namespace Daniel15.Sharpamp
 		/// </summary>
 		protected enum IPCCommand
 		{
+			/// <summary>
+			/// Get the Winamp version number
+			/// </summary>
 			GetVersion = 0,
+			/// <summary>
+			/// Check whether Winamp is playing, paused, or stopped
+			/// </summary>
             IsPlaying = 104,
+			/// <summary>
+			/// Get the file name of the currently playing file
+			/// </summary>
 			GetFilename = 3031,
+			/// <summary>
+			/// Get the title of the currently playing song
+			/// </summary>
 			GetTitle = 3034,
+			/// <summary>
+			/// Get information about the currently playing song
+			/// </summary>
 			ExtendedFileInfo = 3026,
 		}
 
@@ -52,10 +67,25 @@ namespace Daniel15.Sharpamp
 		/// </summary>
 		protected enum Command
 		{
+			/// <summary>
+			/// Play the current song
+			/// </summary>
 			Play = 40045,
+			/// <summary>
+			/// Play or pause the current song
+			/// </summary>
 			PlayPause = 40046,
+			/// <summary>
+			/// Stop the current song
+			/// </summary>
 			Stop = 40047,
+			/// <summary>
+			/// Go to the previous track
+			/// </summary>
 			PrevTrack = 40198,
+			/// <summary>
+			/// Go to the next track
+			/// </summary>
 			NextTrack = 40048,
 		}
 		#endregion
@@ -164,6 +194,9 @@ namespace Daniel15.Sharpamp
 			Debug.WriteLine("Subclassed Winamp window (old proc = " + _OldWinampWndProc + ", new proc = " + _WinampWndProc +")");
 		}
 
+		/// <summary>
+		/// Destructor for Winamp API. Removes the subclassing
+		/// </summary>
 		~Winamp()
 		{
 			// Better remove this
@@ -383,20 +416,50 @@ namespace Daniel15.Sharpamp
 	}
 
 	#region Events
+	/// <summary>
+	/// Represents the method that will handle the SongChangedEvent
+	/// </summary>
+	/// <param name="sender">Winamp object that sent the event</param>
+	/// <param name="e">Arguments for the event</param>
 	public delegate void SongChangedEventHandler(object sender, SongChangedEventArgs e);
+	/// <summary>
+	/// Provides data for the SongChanged event
+	/// </summary>
 	public class SongChangedEventArgs : EventArgs
 	{
+		/// <summary>
+		/// The song that is currently playing
+		/// </summary>
 		public Song Song { get; private set; }
+		/// <summary>
+		/// Create a new instance of SongChangedEventArgs for a specified song
+		/// </summary>
+		/// <param name="song">The current song</param>
 		public SongChangedEventArgs(Song song)
 		{
 			Song = song;
 		}
 	}
 
+	/// <summary>
+	/// Represents the method that will handle the StatusChangedEvent
+	/// </summary>
+	/// <param name="sender">Winamp object that sent the event</param>
+	/// <param name="e">Arguments for the event</param>
 	public delegate void StatusChangedEventHandler(object sender, StatusChangedEventArgs e);
+	/// <summary>
+	/// Provides data for the StatusChanged event
+	/// </summary>
 	public class StatusChangedEventArgs : EventArgs
 	{
+		/// <summary>
+		/// The current Winamp status
+		/// </summary>
 		public Status Status { get; private set; }
+		/// <summary>
+		/// Create a new instance of StatusChangedEventArgs
+		/// </summary>
+		/// <param name="status">The current status</param>
 		public StatusChangedEventArgs(Status status)
 		{
 			Status = status;
@@ -405,11 +468,22 @@ namespace Daniel15.Sharpamp
 	}
 	#endregion
 
-	// TODO: Move to new class
+	/// <summary>
+	/// Winamp status
+	/// </summary>
 	public enum Status
 	{
+		/// <summary>
+		/// Winamp is currently not playing
+		/// </summary>
 		Stopped = 0,
+		/// <summary>
+		/// Winamp is currently playing
+		/// </summary>
 		Playing = 1,
+		/// <summary>
+		/// Winamp is currently paused
+		/// </summary>
 		Paused = 3
 	}
 }

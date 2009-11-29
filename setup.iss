@@ -1,5 +1,5 @@
 [Setup]
-OutputDir=C:\Users\Daniel\Documents\Visual Studio 2008\Projects\Winamp\Setup
+OutputDir=C:\Users\Daniel\Documents\Visual Studio 2008\Projects\Winamp
 VersionInfoVersion=1.0.0.0
 VersionInfoCompany=Daniel15
 VersionInfoDescription=Sharpamp
@@ -20,6 +20,7 @@ AppID=Sharpamp 1.0 Beta
 UninstallDisplayName=Sharpamp
 [Files]
 Source: Sharpamp\bin\Release\Daniel15.Sharpamp.dll; DestDir: {app}; Flags: gacinstall; StrongAssemblyName: Daniel15.Sharpamp
+Source: Sharpamp\bin\Release\Daniel15.Sharpamp.xml; DestDir: {app}
 Source: Samples\HelloWorldGUI\Debug\gen_HelloWorldGUI.dll; DestDir: {app}\Samples\HelloWorldGUI\Debug
 Source: Samples\HelloWorldGUI\Debug\HelloWorldGUI.dll; DestDir: {app}\Samples\HelloWorldGUI\Debug
 Source: Samples\HelloWorldGUI\HelloWorldGUI\gen_HelloWorldGUI\AssemblyInfo.cpp; DestDir: {app}\Samples\HelloWorldGUI\HelloWorldGUI\gen_HelloWorldGUI
