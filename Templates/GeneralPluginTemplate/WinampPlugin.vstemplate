@@ -1,0 +1,24 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>General Winamp Plugin</Name>
+        <Description>A C# plugin for Winamp. Contains TWO projects - The C# plugin itself, and a C++ wrapper for the plugin.</Description>
+        <Icon>__TemplateIcon.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+		<DefaultName>WinampPlugin</DefaultName>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <ProjectTemplateLink ProjectName="$projectname$">
+                Plugin\WinampPlugin.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="gen_$projectname$">
+                PluginWrapper\WinampPluginWrapper.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>Daniel15.Sharpamp.GeneralPluginWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f55e11f03c701e4a</Assembly>
+		<FullClassName>Daniel15.Sharpamp.GeneralPluginWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

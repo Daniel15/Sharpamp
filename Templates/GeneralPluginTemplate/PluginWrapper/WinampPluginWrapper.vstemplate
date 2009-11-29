@@ -1,0 +1,31 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name>Winamp Plugin Wrapper</Name>
+		<Description>C++ wrapper for C# Winamp plugin</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>gen_WinampPlugin</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="gen_WinampPlugin.vcproj" ReplaceParameters="true">
+			<ProjectItem ReplaceParameters="true">AssemblyInfo.cpp</ProjectItem>
+			<ProjectItem TargetFileName="$projectname$.h" ReplaceParameters="true">gen_WinampPlugin.h</ProjectItem>
+			<ProjectItem TargetFileName="$projectname$.cpp" ReplaceParameters="true">gen_WinampPlugin.cpp</ProjectItem>
+			<ProjectItem ReplaceParameters="true">PluginWrapper.h</ProjectItem>
+			<ProjectItem ReplaceParameters="true">PluginWrapper.cpp</ProjectItem>
+			<ProjectItem>stdafx.h</ProjectItem>
+			<ProjectItem>stdafx.cpp</ProjectItem>
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Daniel15.Sharpamp.GeneralPluginWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f55e11f03c701e4a</Assembly>
+		<FullClassName>Daniel15.Sharpamp.GeneralPluginWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

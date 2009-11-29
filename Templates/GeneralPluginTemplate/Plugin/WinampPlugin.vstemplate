@@ -1,0 +1,26 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name>General Winamp Plugin</Name>
+		<Description>A C# Winamp plugin</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>WinampPlugin</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>	
+		<Project File="WinampPlugin.csproj" ReplaceParameters="true">
+			<ProjectItem TargetFileName="$projectname$.cs" ReplaceParameters="true" OpenInEditor="true">WinampPlugin.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Daniel15.Sharpamp.GeneralPluginWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f55e11f03c701e4a</Assembly>
+		<FullClassName>Daniel15.Sharpamp.GeneralPluginWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>
