@@ -47,7 +47,7 @@
     <Compile Include="Song.cs" />
     <Compile Include="Win32.cs" />
     <Compile Include="Winamp.cs" />
-    <Compile Include="Plugin.cs" />
+    <Compile Include="GeneralPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.pfx" />
