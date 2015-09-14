@@ -1,7 +1,10 @@
 Sharpamp 1.0 Beta - Create Winamp plugins in C#
 ===============================================
 By Daniel15 - http://dan.cx/
+
 https://github.com/Daniel15/Sharpamp
+
+Download: https://github.com/Daniel15/Sharpamp/releases/download/release-0.1.0/Sharpamp.0.1.Beta.exe
 
 Sharpamp allows you to easily write Winamp plugins in C#. It provides a library for access to the
 Winamp API, and a Visual Studio template for creating Winamp plugins. It **requires** you to have 
