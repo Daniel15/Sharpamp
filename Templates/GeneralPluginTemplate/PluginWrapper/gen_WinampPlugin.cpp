@@ -37,9 +37,16 @@ int init()
 }
  
 // Called when Configure button in Winamp is clicked
-void config()
+void config(void)
 {
+	try
+	{
 	PluginWrapper::plugin->Config();
+	}
+	catch (Exception^ ex)
+	{
+		System::Windows::Forms::MessageBox::Show(L"An error occured while opening the configuration page! \r\n" + ex->Message);
+	}
 }
  
 // Called when Winamp is quitting
