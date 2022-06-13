@@ -8,7 +8,7 @@ Download: https://github.com/Daniel15/Sharpamp/releases/download/release-0.1.0/S
 
 Sharpamp allows you to easily write Winamp plugins in C#. It provides a library for access to the
 Winamp API, and a Visual Studio template for creating Winamp plugins. It **requires** you to have 
-Visual Studio 2008 (2005 or 2010 might work, but they have not yet been tested). Take a look at the
+Visual Studio 2005, 2008 or 2010. Take a look at the
 [Getting Started](https://github.com/Daniel15/Sharpamp/wiki/Getting-Started) article to see how 
 simple it is to get started :)
 
@@ -31,7 +31,7 @@ A demonstration of what you can do with Sharpamp is shown in the [HelloWorldGUI]
 
 Requirements:
 =============
- - Visual Studio 2008 (should work in 2005 as well as 2010 beta, but this has not been tested yet)
+ - Visual Studio 2005, 2008 or 2010
    - C# and C++ both have to be installed
  - Winamp
 
