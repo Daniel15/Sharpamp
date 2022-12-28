@@ -41,7 +41,7 @@ void config(void)
 {
 	try
 	{
-	PluginWrapper::plugin->Config();
+		PluginWrapper::plugin->Config();
 	}
 	catch (Exception^ ex)
 	{
